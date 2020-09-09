@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "dadf3e2f-6ad7-4e0c-a0ac-3dcdc80148ce",
+		"name": "Spring Boot Framework",
+		"description": "Postman collection for the Spring Boot Application Template\n\nhttps://github.com/Spring-Boot-Framework/Spring-Boot-Application-Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				},
+				"description": "http://localhost:8080\nHome Page. \nNo Login Required."
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person XML",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "bf22bff7-9960-48b6-ba1e-6c8c85f9e58f",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person"
+					]
+				},
+				"description": "API - Get a JSON array of all Persons\nhttp://localhost:8080/api/person"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person/1 XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"1"
+					]
+				},
+				"description": "GET a user by id in XML data format\nhttp://localhost:8080/api/person/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person/1 JSON",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"1"
+					]
+				},
+				"description": "GET user by id in JSON format\nhttp://localhost:8080/api/person/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person JSON",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person"
+					]
+				},
+				"description": "GET all users in JSON data format\nhttp://localhost:8080/api/person"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Jane3\",\r\n\t\"username\": \"jane3\",\r\n\t\"emailPrimary\": \"jane3.howell@gmail.com\",\r\n    \"emailSecondary\": \"jane1.howell@gmail.com\",\r\n    \"phone\":9191919195,\r\n\t\"gender\": \"MALE\",\r\n\t\"age\": 25,\r\n\t\"password\": \"password\",\r\n\t\"dob\":\"25-12-2006\",\r\n\t\"isAdult\":true,\r\n\t\"address\": {\r\n\t\t\"street\": \"Jane Plains\",\r\n\t\t\"suite\": \"Suite 779\",\r\n\t\t\"city\": \"Wisokyburghh\",\r\n\t\t\"zipcode\": \"90565-7771\",\r\n\t\t\"geo\": {\r\n\t\t\t\"lat\": \"-43.9589\",\r\n\t\t\t\"lng\": \"-34.4628\"\r\n\t\t}\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person"
+					]
+				},
+				"description": "POST  a person\nhttp://localhost:8080/api/person"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person/1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"abc\",\r\n\t\"username\": \"ervin\",\r\n\t\"emailPrimary\": \"ervin.howell@gmail.com\",\r\n    \"emailSecondary\": \"ervin.howell@gmail.com\",\r\n    \"phone\":9191919192,\r\n\t\"gender\": \"FEMALE\",\r\n\t\"age\": 35,\r\n\t\"password\": \"password\",\r\n\t\"dob\":\"25-12-2005\",\r\n\t\"isAdult\":false,\r\n\t\"address\": {\r\n\t\t\"street\": \"Victor Plains\",\r\n\t\t\"suite\": \"Suite 879\",\r\n\t\t\"city\": \"Wisokyburgh\",\r\n\t\t\"zipcode\": \"90566-7771\",\r\n\t\t\"geo\": {\r\n\t\t\t\"lat\": \"-43.9589\",\r\n\t\t\t\"lng\": \"-34.4628\"\r\n\t\t}\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/person/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"1"
+					]
+				},
+				"description": "Update a person by ID\nhttp://localhost:8080/api/person/1"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/generic-hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/personalized-hello?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personalized-hello"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				},
+				"description": "http://localhost:8088/api/generic-hello"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/personalized-hello?name=springboot%20application",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/personalized-hello?name=springboot%20application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"personalized-hello"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "springboot%20application"
+						}
+					]
+				},
+				"description": "http://localhost:8088/api/personalized-hello?name=springboot%20application"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						""
+					]
+				},
+				"description": "http://localhost:8080/actuator/"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health"
+					]
+				},
+				"description": "http://localhost:8080/actuator/health\r\n/actuator/health"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"info"
+					]
+				},
+				"description": "http://localhost:8080/actuator/info\r\n/actuator/info"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/prometheus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/prometheus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"prometheus"
+					]
+				},
+				"description": "http://localhost:8080/actuator/prometheus\r\n/actuator/prometheus"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/health/diskSpace",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health/diskSpace",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health",
+						"diskSpace"
+					]
+				},
+				"description": "http://localhost:8080/actuator/health/diskSpace"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/health/ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health",
+						"ping"
+					]
+				},
+				"description": "http://localhost:8080/actuator/health/ping"
+			},
+			"response": []
+		},
+		{
+			"name": "/actuator/health/db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/actuator/health/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator",
+						"health",
+						"db"
+					]
+				},
+				"description": "http://localhost:8080/actuator/health/db"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/loggers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/loggers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"loggers"
+					]
+				},
+				"description": "http://localhost:8080/api/loggers"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person/pageable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/person/pageable?page=0&size=2&sort=createdOn,desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"pageable"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						},
+						{
+							"key": "sort",
+							"value": "createdOn,desc"
+						}
+					]
+				},
+				"description": "http://localhost:8080/api/personPageable?page=0&size=2&sort=createdOn,desc"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/person/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/person/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"person",
+						"3"
+					]
+				},
+				"description": "DELETE\r\n/api/person/3\r\nhttp://localhost:8080/api/person/3"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "johnDoe",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			}
+		]
+	},
+	"protocolProfileBehavior": {}
+}
